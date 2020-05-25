@@ -7,17 +7,19 @@ public class EmpWageComputation {
 		int empHrs, empWage;
 		int empCheck = (int)(Math.random() * 10) %3;
 
-	   if (empCheck == IS_FULL_TIME){
+		switch ((int)empCheck){
+			case 1:
 			System.out.println("Employee is Full Time Present");
 			empHrs = 8;
-		}
-		else if (empCheck == IS_PART_TIME){
+			break;
+			case 2:
          System.out.println("Employee is Part Time Present");
          empHrs = 4;
-      }
-		else{
+      	break;
+			default:
 			System.out.println("Employee is Absent");
 			empHrs = 0;
+			break;
 		}
 		empWage = empHrs * EMP_RATE_PER_HOUR;
 		System.out.println("Employee Wage:" +empWage);
