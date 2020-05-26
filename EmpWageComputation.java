@@ -20,10 +20,10 @@ public class EmpWageComputation {
 			totalWorkingDays++;
 		int empCheck = (int)(Math.random() * 10) %3;
 		switch ((int)empCheck){
-			case 1:
+			case IS_FULL_TIME:
 				empHrs = 8;
 			break;
-			case 2:
+			case IS_PART_TIME:
 					empHrs = 4;
 		     	break;
 			default:
